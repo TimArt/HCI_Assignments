@@ -1,0 +1,67 @@
+/*html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+*/
+
+button {
+    background: rgba(0, 0, 0, 0.75);
+    border: 0 solid rgba(0,0,0,0.35);
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.20), inset 0 2px 0 0 rgba(255,255,255,0.04), inset 0 0 0 0 rgba(255,255,255,0.16);
+    border-radius: 3px;
+    margin: 4px;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+
+/*input {
+    width: 90%;
+    margin: 10px;
+}*/
+
+.cool {
+    color: blue;
+}
+
+.flex_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex_number_wrapper > * {
+    width: 30%;
+}
+
+.half_container > * {
+    width: 46.5%;
+}
+
+.flex_variable_sizes_wrapper > * {
+    width: auto;
+}
+
+.input_display_text {
+    border: none;
+    font-size: 64px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#gesture_area {
+    background: #ECECEC;
+    border: 1px solid #7E7E7E;
+    box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}

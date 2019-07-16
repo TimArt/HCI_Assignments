@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Phone</title>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+        <link rel="stylesheet" href="phone.css">
+    </head>
+    <body>
+        <div id="tab_bar" class="flex_wrapper">
+            <button id="tab_dialer">Dialer</button>
+            <button id="tab_contact_list">Contact List</button>
+            <button id="tab_contact_add">Add Contact</button>
+            <button id="tab_gestures">Test Gestures</button>
+        </div>
+
+        <div id="content">
+            <div class="content_section" id="content_dialer">
+                <h2>Dialer</h2>
+                <form id="dialer_form">
+                    <input type="text" name="dial_visual" id="dial_visual" class="input_display_text">
+                    <div class="flex_number_wrapper">
+                        <button id="dial_1" type="button">1</button>
+                        <button id="dial_2" type="button">2</button>
+                        <button id="dial_3" type="button">3</button>
+                        <button id="dial_4" type="button">4</button>
+                        <button id="dial_5" type="button">5</button>
+                        <button id="dial_6" type="button">6</button>
+                        <button id="dial_7" type="button">7</button>
+                        <button id="dial_8" type="button">8</button>
+                        <button id="dial_9" type="button">9</button>
+                        <button id="dial_STAR" type="button">*</button>
+                        <button id="dial_0" type="button">0</button>
+                        <button id="dial_HASH" type="button">#</button>
+                    </div>
+                    <div class="half_container">
+                        <button type="button" id="dialer_clear">Clear</button>
+                        <button type="submit" form="dialer_form" value="submit">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="content_section" id="content_contact_list">
+                <h2>Contact List</h2>
+                <div class="flex_variable_sizes_wrapper">
+                    <button>McKenna Scott</button>
+                    <button>Dan Arterbury</button>
+                    <button>Andy Arterbuy</button>
+                    <button>Kristin Arterbury</button>
+                    <button>Ryan Boldt</button>
+                    <button>George Washington</button>
+                    <button>Judge Baylor</button>
+                </div>
+            </div>
+            <div class="content_section" id="content_contact_add">
+                <h2>Add Contact</h2>
+                <form id="contact_form" class="pure-form pure-form-stacked">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone">
+
+
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email">
+
+                    <button type="submit" form="contact_form" value="submit">
+                        Add Contact
+                    </button>
+
+                    <button type="submit" form="contact_form" value="clear">
+                        Clear
+                    </button>
+                </form>
+            </div>
+
+            <div class="content_section" id="content_gestures">
+                <input id="gesture_output" name="gesture_output" class="input_display_text">
+                <div id="gesture_area"></div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="phone.js"></script>
+    </body>
+</html>
