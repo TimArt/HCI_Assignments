@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <ul class="wrapper">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Music</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="wrapper">
+    <h1>Building Modular C++ Apps with ValueTrees using JUCE</h1>
+    <img src="img/code2.jpg" alt="Code on a computer screen.">
+  </header>
+
+  <main class="wrapper">
+    <h2>What is JUCE and ValueTree?</h2>
+
+    <p><a href="https://juce.com">JUCE</a> is a cross platform C++ framework
+    with a set of classes useful for GUI and audio software development. It is
+    open-source and free to use, but requires a license for commercial use.</p>
+
+    <p><code>ValueTree</code> is one of JUCE's awesome classes. It is a tree data
+    structure that holds data in a hierarchal structure, much like XML. Each
+    piece of data in the tree can have listeners which get updated when that data
+    is changed. Any changes to the data can be easily undone and redone, providing
+    automatic undo/redo functionality. Finally, the <code>ValueTree</code> can
+    be easily serialized to XML and reloaded from XML.</p>
+
+    <p>The <code>ValueTree</code> data structure is advantageous to use to handle
+    the data model of an application. Often in large applications, there may be
+    many different settings a user can change. These settings often need to be
+    able to be saved and loaded and undone and redone easily. Such data in an
+    application is often thought of in a hierarchal structure. For example, for
+    a photo editing application might contain many layers of images, each image
+    might contain associated color settings as well as a list of different image
+    effects, each effect might contain further individual settings, etc. A data
+    model such as this can easily be represented as a <code>ValueTree</code>. If
+    used in this way, a <code>ValueTree</code> can handle all the user settings,
+    updates to those settings, save/load, and undo/redo for the entire application.
+    If compared with an Model-View-Controller (MVC) design paradigm,
+    <code>ValueTree</code> handles both the Model and the controller. A view
+    could be made which holds reference to parts of the <code>ValueTree</code>
+    that it needs to know about.
+    </p>
+
+    <h2>Development Strategy</h2>
+      <h3>Data Model Definition and Hierarchy Design</h3>
+      <p>The first step to using <code>ValueTree</code> to manage an
+      application's data is to define the data hierarchy. You should first write
+      this out on paper and make a few different drafts, but you can still change
+      this design later. Next, create a file called <code>DataIdentifiers.h</code>
+      which will contain all identifiers of different parts of the data Hierarchy.
+      Try to organize this file in the same hierarchal fashion as you planned
+      so that you can refer to this file later when determining how the data
+      should be laid out.
+      </p>
+
+      <h3>Concrete ValueTree Classes</h3>
+      <p>After defining the data model, you can begin creating classes to hold
+      certain parts of the <code>ValueTree</code> model. These classes are referred
+      to as "Concrete ValueTree Classes". You could use a <code>ValueTree</code>
+      all by itself to interact with the data, but a "Concrete ValueTree Class"
+      provides this access in a way that looks like normal objects and ensures
+      things like type safety, level of access, etc.</p>
+
+      <h3>Component View Classes</h3>
+      <p>Finally, after creating the main data handling and access parts of our
+      application with Concrete ValueTree Classes, we can now create UI
+      elements with which a user can interact which display and modify Concrete
+      ValueTree objects. This design has decoupled the data and view portions of
+      our application, so we could have any number of views associated with a
+      given Concrete ValueTree class.</p>
+
+
+    <!-- Comment form : purposely using div because we do not have a web server
+         to save the data. -->
+    <div class="form">
+      <div class="form-element">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+
+      <div class="form-element">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+
+      <div class="form-element">
+        <label for="comment">Comment</label>
+        <textarea id="story" name="story" rows="4" required></textarea>
+      </div>
+
+      <div class="form-element">
+        <button onclick="document.getElementById('comment_alert').style = 'display: block;';">Submit</button>
+        <div id="comment_alert" role="alert" class="alert" style="display:none;">
+          Comment Submitted
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
