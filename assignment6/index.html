@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Phone</title>
+        <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+        <link id="style" rel="stylesheet" href="phone-min.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="phone.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div id="tab_bar" class="flex_wrapper">
+                <button id="tab_dialer" class="tab tab--active">Dialer</button>
+                <button id="tab_contact_list" class="tab tab--inactive">Contact List</button>
+                <button id="tab_contact_add" class="tab tab--inactive">Add Contact</button>
+                <button id="tab_about" class="tab tab--inactive">About This Project</button>
+            </div>
+            <button onclick="toggleStylesheet()" class="tab tab--inactive">Large Mode</button>
+        </nav>
+
+        <div id="content" class="wrapper">
+            <div class="content_section" id="content_dialer">
+                <h2>Dialer</h2>
+                <form id="dialer_form">
+                    <input type="text" name="dial_visual" id="dial_visual" class="input_display_text">
+                    <div class="dialer_buttons">
+                        <button id="dial_1" type="button" class="btn">1</button>
+                        <button id="dial_2" type="button" class="btn">2</button>
+                        <button id="dial_3" type="button" class="btn">3</button>
+                        <button id="dial_4" type="button" class="btn">4</button>
+                        <button id="dial_5" type="button" class="btn">5</button>
+                        <button id="dial_6" type="button" class="btn">6</button>
+                        <button id="dial_7" type="button" class="btn">7</button>
+                        <button id="dial_8" type="button" class="btn">8</button>
+                        <button id="dial_9" type="button" class="btn">9</button>
+                        <button id="dial_STAR" type="button" class="btn">*</button>
+                        <button id="dial_0" type="button" class="btn">0</button>
+                        <button id="dial_HASH" type="button" class="btn">#</button>
+                    </div>
+                    <div class="dialer_commands">
+                        <button type="button" id="dialer_clear" class="btn">Clear</button>
+                        <button type="submit" form="dialer_form" value="submit" class="btn">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="content_section" id="content_contact_list">
+                <h2>Contact List</h2>
+                <div class="flex_variable_sizes_wrapper">
+                    <button class="btn">McKenna Scott</button>
+                    <button class="btn">Dan Arterbury</button>
+                    <button class="btn">Andy Arterbuy</button>
+                    <button class="btn">Kristin Arterbury</button>
+                    <button class="btn">Ryan Boldt</button>
+                    <button class="btn">George Washington</button>
+                    <button class="btn">Judge Baylor</button>
+                </div>
+            </div>
+            <div class="content_section" id="content_contact_add">
+                <h2>Add Contact</h2>
+                <form id="contact_form" class="pure-form pure-form-stacked">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone">
+                    </div>
+
+
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+
+                    <button type="submit" form="contact_form" value="submit" class="btn">
+                        Add Contact
+                    </button>
+
+                    <button type="submit" form="contact_form" value="clear" class="btn">
+                        Clear
+                    </button>
+                </form>
+            </div>
+
+            <div class="content_section" id="content_about">
+                <h2>About</h2>
+                In this project I learned how to make a layout that was easily
+                adaptable in font size and color scheme. I acheived this using
+                a combination of useful new CSS features: variables, flexbox, and
+                grid.
+
+                <h3>CSS Variables</h3>
+                I used variables to set colors and font sizes used consistently
+                throuought a style, so that if I needed to change them, I could
+                just change the variable. This made transitioning to a large,
+                high-contrast layout very easy with a few simple variable changes.
+
+
+                <h3>CSS FlexBox</h3>
+                I used FlexBox to handle the navigation tabs. This allows the tabs
+                to easily flow and flex as the size of the window and size of the
+                tab content changes. When changing to a large font size, I did not
+                need to modify the tab code because it simply flowed to fit.
+
+                <h3>CSS Grid</h3>
+                I used CSS Grid to layout the dial buttons. This made it very easy
+                for me to define, in fractional units, that I needed 3 rows split
+                3 ways and a final row split two ways. This is often a feature
+                that people have implemented in CSS frameworks in the past but is
+                now a feature of CSS itself and is very easy to use! I also used
+                it a bit in the nav.
+
+                <h3>Low Vision Mode (Large Mode)</h3>
+                For low vision mode I made sure that all the fonts were large and
+                the colors of the doucment were very contrasted. I changed the hover
+                color of the tabs too to add more contrast. It was nice that I
+                never had to change the background button color between designs
+                even though it looks like it changed. This was because I used a
+                semi-transparent and dark button background color. So when the
+                background of the document becomes darker, the button becomes darker.
+                Lastly, I used a single HTML file and some vanilla javascript to
+                toggle the low vision mode.
+            </div>
+        </div>
+    </body>
+</html>

@@ -17,6 +17,27 @@
 		"oAP": "/index.html",
 		"oF": 0
 		},
+	"/phone-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/phone-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/phone-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/phone-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/phone.css": {
 		"aP": 1,
 		"bl": 0,
