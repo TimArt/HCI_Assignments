@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title>
+			Calculator Demo
+		</title>
+		<link rel="stylesheet" href="calculator.css" type="text/css">
+	</head>
+	<body>
+		<div id="calculator">
+			<h1>calc U l8r</h1>
+			<div class="calculator_row">
+				<input id="number_input">
+			</div>
+			<div id="calculator_buttons" class="quad quad--top-left">
+				<div class="calculator_row">
+					<button id="button7" class="calcButton row1 col1">7</button>
+					<button id="button8" class="calcButton row1 col2">8</button>
+					<button id="button9" class="calcButton row1 col3">9</button>
+					<button id="buttonDivide" class="calcButton row1 col4 function">/</button>
+				</div>
+				<div class="calculator_row">
+					<button id="button4" class="calcButton row2 col1">4</button>
+					<button id="button5" class="calcButton row2 col2">5</button>
+					<button id="button6" class="calcButton row2 col3">6</button>
+					<button id="buttonMultiply" class="calcButton row2 col4 function">*</button>
+				</div>
+				<div class="calculator_row">
+					<button id="button1" class="calcButton row3 col1">1</button>
+					<button id="button2" class="calcButton row3 col2">2</button>
+					<button id="button3" class="calcButton row3 col3">3</button>
+					<button id="buttonAdd" class="calcButton row3 col4 function">+</button>
+				</div>
+				<div class="calculator_row">
+					<button id="button0" class="calcButton row4 col1">0</button>
+					<button id="buttonClear" class="calcButton row4 col2 meta">C</button>
+					<button id="buttonEquals" class="calcButton row4 col3 meta">=</button>
+					<button id="buttonSubtract" class="calcButton row4 col4 function">-</button>
+				</div>
+			</div>
+		</div>
+		<div id="comments">
+			<h2>About this app</h2>
+			<p>This is a <strong>single-button</strong> switch interface that uses <strong>the 'a' key on the keyboard</strong>. The selection strategy is quadrant based. Once a quadrant is selected, the user then selects from the sub-quadrants. This idea could be extended to any type of interface by breaking it up into quadrants, then sub quadrants, etc. This is heavily inspired by a technique in computer graphics which I cannot remember the name of. Maybe cube marching? Basically the CG technique breaks a scene into cube quadrants and then sub-quadrants to find an object intersection or something.</p>
+
+			<h3>How To Use</h3>
+			<ul>
+				<li>The app starts by cycling through the 4 quadrants of the calculator.</li>
+				<li>When the blue selection rectangle is over the quadrant which contains the button you wish to interact with, press the 'a' key.</li>
+				<li>Now the the selection cycles through the four keys in that quadrant.</li>
+				<ul>
+					<li>To select the desired button, single tap the 'a' key when your desired button shows blue selection focus.</li>
+					<li>To back out of the current quadrant without selecting a button, double tap the 'a' key.</li>
+				</ul>
+			</ul>
+
+			<h3>Breif Usability Study - Comparing Speeds</h3>
+
+			<h4>Experiment Design</h4>
+			<p>This test compares selection scanning speeds of 300ms and 200ms. For each speed condition, the following test equations are entered in order 3 different times. For each trial of entering the equations, the number of errors is recorded and the total entry time is recorded.</p>
+
+			<h4>User Test Equations (7)</h4>
+			<ul>
+				<li>730 + 982 / 15 * 6 - 4 = C</li>
+				<li>156 / 439 + 27 - 8 * 0 = C</li>
+				<li>0 / 123 * 45 + 67 - 89 = C</li>
+				<li>68 + 7 - 42 * 19 / 35 = C</li>
+				<li>098 + 765 / 43 * 2 - 1 = C</li>
+				<li>10 - 29 * 38 / 47 + 56 = C</li>
+				<li>49 * 85 - 673 + 1 / 20 = C</li>
+			</ul>
+
+			<h4>Results</h4>
+
+
+			<h4>Conclusions</h4>
+
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+		<script src="calculator.js" type="text/javascript"></script>
+	</body>
+</html>
